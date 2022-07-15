@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">hulkStore</string>
+    <string name="app_title">Hulk Store</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_username">Usuario</string>
+    <string name="prompt_password">Contraseña</string>
+    <string name="action_sign_in">Ingresar</string>
+    <string name="action_register">Registrarse</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Bienvenido!"</string>
+    <string name="invalid_username">Usuario no valido</string>
+    <string name="invalid_password">La contraseña debe tener mas de 5 caracteres</string>
+    <string name="login_failed">"Usuario o contraseña incorrecta"</string>
+    <string name="total">Total :</string>
+    <string name="checkout">Pagar</string>
+    <string name="debit">Debito a rol de pagos</string>
+    <string name="amount">Monto</string>
+    <string name="completed">COMPLETADO</string>
+    <string name="to">A</string>
+    <string name="date">FECHA</string>
+    <string name="time">HORA</string>
+    <string name="thank_you">Gracias!</string>
+    <string name="successful_transaction">Su transacción fue exitosa</string>
+    <string name="close">Cerrar</string>
+    <string name="no_stock">No hay stock</string>
+    <string name="no_cart">No ha cargado ningun producto al carro de comrpas</string>
+    <string name="error">Ocurrio un problema al procesar el pago, vuelve a intentar mas tarde.</string>
+</resources>
