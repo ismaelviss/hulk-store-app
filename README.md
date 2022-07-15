@@ -11,6 +11,15 @@ modificar la variable URL
 Ejemplo:
 const val URL = "http://192.168.2.101:8080/v1/"
 
+## Caputas de pantall
+### Login con el usuario "user"
+![Login](https://raw.githubusercontent.com/ismaelviss/hulk-store-app/master/app/src/main/resources/login.png)
+
+### Catalogo de productos
+![Products](https://raw.githubusercontent.com/ismaelviss/hulk-store-app/master/app/src/main/resources/catalogo_productos.png)
+
+### Ticket de compra
+![Ticket](https://raw.githubusercontent.com/ismaelviss/hulk-store-app/master/app/src/main/resources/ticket.png)
 
 ## tecnologías usadas
 * Android con Kotlin
