@@ -31,3 +31,31 @@ data class Order (
     val status: String? = null,
     val complete: Boolean? = null
 )
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+class OrdersRequest(
+    elements: Collection<OrderRequest>
+) : ArrayList<OrderRequest>(elements) {
+
+    fun toJson(): String = mapper.writeValueAsString(this)
+
+    companion object {
+        fun fromJson(json: String) = mapper.readValue<Orders>(json)
+    }
+}
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+class OrderRequest (
+    @get:JsonProperty("productId")@field:JsonProperty("productId")
+    val productID: Long? = null,
+    var quantity: Long? = null,
+    val shipDate: String? = null,
+    val status: String? = null,
+    val complete: Boolean? = null
+) {
+    fun toJson(): String = mapper.writeValueAsString(this)
+
+    companion object {
+        fun fromJson(json: String) = mapper.readValue<Orders>(json)
+    }
+}

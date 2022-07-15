@@ -105,9 +105,13 @@ class StoreCartViewModel
         GlobalScope.launch(Dispatchers.Main) {
             _payment.value = ResultProcess.Loading()
 
-            val result = withContext(Dispatchers.IO) { productRepository.payOrder(user?.token?:"", listOrder.toList()) }
+            val result = withContext(Dispatchers.IO) { productRepository.payOrder(user?.token?.tokenBearer()?:"", listOrder.toList()) }
 
             _payment.value = result
         }
     }
+}
+
+fun String.tokenBearer() : String {
+    return "Bearer $this"
 }

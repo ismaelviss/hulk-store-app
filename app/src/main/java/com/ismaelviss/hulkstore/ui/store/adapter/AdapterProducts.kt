@@ -45,7 +45,7 @@ class AdapterProducts(
                     }
                 })
 
-            categoryName.text = item.category?.name
+            categoryName.text = item.category
             price.text = getFormatMoney(item.price)
 
             quantity.text = item.quantity.toString()

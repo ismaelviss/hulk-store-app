@@ -94,7 +94,7 @@ class Tools {
         fun formatDateService(dateTransaction: Date): String {
             return try {
                 //2022-07-15T02:07:29.600Z
-                val pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+                val pattern = "yyyy-MM-dd'T'HH:mm:ss.SSS"
                 val simpleDateFormat = SimpleDateFormat(pattern)
                 val date = simpleDateFormat.format(dateTransaction).toString()
 

@@ -29,7 +29,7 @@ class Products() : ArrayList<Product>() {
 @JsonIgnoreProperties(ignoreUnknown = true)
 data class Product (
     val id: Long? = null,
-    val category: Category? = null,
+    val category: String? = null,
     val name: String? = null,
     val photoUrls: String? = null,
     val status: Boolean? = null,

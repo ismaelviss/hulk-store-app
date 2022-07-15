@@ -3,7 +3,9 @@ package com.ismaelviss.hulkstore.retrofit
 import com.ismaelviss.hulkstore.services.login.model.UserRequest
 import com.ismaelviss.hulkstore.services.login.model.UserResponse
 import com.ismaelviss.hulkstore.services.product.model.Orders
+import com.ismaelviss.hulkstore.services.product.model.OrdersRequest
 import com.ismaelviss.hulkstore.services.product.model.Products
+import okhttp3.RequestBody
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.GET
@@ -19,5 +21,5 @@ interface IHulkStoreServices {
     fun products(@Header("Authorization") authorization: String) : Call<Products>
 
     @POST("store/order")
-    fun order(@Header("Authorization") authorization: String,@Body orders: Orders) : Call<Orders>
+    fun order(@Header("Authorization") authorization: String, @Body orders: OrdersRequest) : Call<Orders>
 }

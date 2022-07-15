@@ -13,9 +13,15 @@ import dagger.Provides
 @Module
 class RepositoryModule {
 
+    private var loginRepository: ILoginRepository? = null
+
     @Provides
     fun provideILoginRepository(loginService: ILoginService) : ILoginRepository {
-        return LoginRepository(loginService)
+
+        if (loginRepository == null)
+            loginRepository = LoginRepository(loginService)
+
+        return loginRepository!!
     }
 
     @Provides

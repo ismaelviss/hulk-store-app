@@ -28,8 +28,13 @@ class LoginRepository(private val loginService: ILoginService) : ILoginRepositor
                     val user = User()
                     user.token = userResponse.jwt!!
 
-                    val claims = JwtDecode.decode("wRAhaK8aGMK43c3pOA9CVMQa5R3mlfR+HUJQjubRMBzpcsKOgn+HMApLzUDhyCh6HnnmOmU0BSJwB1Z/eqDLxA==", userResponse.jwt!!)
+                    val claims = JwtDecode.decode("wRAhaK8aGMK43c3pOA9CVMQa5R3mlfR+HUJQjubRMBzpcsKOgn+HMApLzUDhyCh6HnnmOmU0BSJwB1Z/eqDLxA==",
+                        userResponse.jwt
+                    )
 
+                    user.firstName = claims["firstName"].toString()
+                    user.lastName = claims["lastName"].toString()
+                    user.email = claims["email"].toString()
 
                     userResult = Result.success(user)
                     return userResult!!
